@@ -1,0 +1,105 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffffe0;
+    color: rgb(0, 0, 0);
+    background-image: url(https://st2.depositphotos.com/1748392/9386/v/450/depositphotos_93863054-stock-illustration-pet-products-seamless-background-white.jpg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #4e3b2d;
+    padding: 20px 0;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: goldenrod;
+}
+
+nav a:hover {
+    color: #d49a2a; 
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f7d799;;
+}
+
+.hero {
+    background-image: url("https://www.pngmart.com/files/4/Golden-Retriever-Puppy-PNG-Clipart.png");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 100px);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.hero h1, .hero p {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.link-inicio {
+    color: #f7d799;
+    font-weight: bold;
+} 
+
+.social-icons {
+margin-top: 10px; 
+}
+.social-icons a {
+text-decoration: none; 
+color: #fffcfc; 
+margin-right: 10px; 
+font-size: 17px; 
+transition: color 0.3s ease;
+}
+.social-icons a:hover {
+color: #e6007b; 
+}
+.social-icons a:nth-child(2):hover {
+color: #3b5998; 
+}

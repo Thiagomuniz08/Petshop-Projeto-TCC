@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Preços - Pet Shop 4 Patas</title>
+    <link rel="stylesheet" href="/front/assets/css/produtos.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="serviços.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <div class="profile-cart">
+        <div style="cursor: pointer;">
+            <a href="Login.html" style="text-decoration: none; color: inherit;">
+            <i  class="fas fa-user" id="profile-icon" style="font-size: 25px;" title="Perfil"></i></a>
+        </div>
+        <div class="profile-cart">
+            <a href="pagamento.html" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-shopping-cart" id="cart-icon" style="font-size: 25px;" title="Carrinho"></i>
+            </a>
+        </div>        
+    </div>
+    
+</header>
+    <h1>Nossos Produtos</h1>
+    <div class="produto-container">
+        <div class="produto">
+            <img src="https://www.katirapet.com.br/uploads/katirapet/produtos_imagens/special-dog-plus-adultos-carne-x4fm8-20230418131048169021270824865651.png" alt="Ração">
+            <h3>Ração</h3>
+            <p>Ração para 
+                <select id="tipo-racao">
+                    <option value="Gato">Gato</option>
+                    <option value="Cachorro">Cachorro</option>
+                </select>
+            </p>
+            <p>
+                <select id="racao-preco">
+                    <option value="2599">R$ 25,99 (1kg)</option>
+                    <option value="7990">R$ 79,90 (5kg)</option>
+                    <option value="14990">R$ 149,90 (10kg)</option>
+                    <option value="31200">R$ 312,00 (25kg)</option>
+                    <option value="60000">R$ 600,00 (50kg)</option>
+                </select>
+            </p>
+            <a href="#" class="button" onclick="addToOrder()">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="https://static.wixstatic.com/media/08a8c4_bb274febb7004fdd98f118aba4594cf6~mv2.png/v1/fill/w_490,h_490,al_c,lg_1,q_85,enc_auto/08a8c4_bb274febb7004fdd98f118aba4594cf6~mv2.png" alt="Shampoo">
+            <h3>Shampoo 700 ml</h3>
+            <p>Shampoo 5 em 1</p>
+            <p class="preco">R$ 30,00</p>
+            <a href="#" class="button" onclick="addToOrder('Shampoo 700 ml', 30.00)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Brinquedos.png" alt="Brinquedo">
+            <h3>Kit 3 com Brinquedos</h3>
+            <p>Kit com 3 Brinquedos diversos para pets</p>
+            <p class="preco">R$ 20,00</p>
+            <a href="#" class="button" onclick="addToOrder('Kit 3 com Brinquedos', 20.00)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Coleira.png "alt="Coleira">
+            <h3>Coleira</h3>
+            <p>Coleira de Couro</p>
+            <p class="preco">R$ 11,99</p>
+            <a href="#" class="button" onclick="addToOrder('Coleira', 11.99)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Peitoral.png" alt="Peitoral">
+            <h3>Coleira Peitoral para Cachorro</h3>
+            <p>Coleira Peitoral Para Cachorro Sem Tração Ajustável Oxford Refletivo de Fácil Controle</p>
+            <p class="preco">R$ 112,90</p>
+            <a href="#" class="button" onclick="addToOrder('Coleira Peitoral para Cachorro', 112.90)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Guia.png" alt="Enforcador">
+            <h3>Enforcador</h3>
+            <p>Enforcador com guia para cães</p>
+            <p class="preco">R$ 25,50</p>
+            <a href="#" class="button" onclick="addToOrder('Enforcador', 25.50)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Pet.png" alt="Brinquedos Simples">
+            <h3>Brinquedo</h3>
+            <p>Brinquedo para o seu pet! (valor unitário)</p>
+            <p class="preco">R$ 7,99</p>
+            <a href="#" class="button" onclick="addToOrder('Brinquedo', 7.99)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/sacolinha.png" alt="Porta Saquinho">
+            <h3>Porta Saquinho</h3>
+            <p>Porta saquinhos com refil</p>
+            <p class="preco">R$ 16,00</p>
+            <a href="#" class="button" onclick="addToOrder('Porta Saquinho', 16.00)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/escova.png" alt="Escova/Rasqueadeira">
+            <h3>Escova/Rasqueadeira</h3>
+            <p>Escova/Rasqueadeira para pets</p>
+            <p class="preco">R$ 9,99</p>
+            <a href="#" class="button" onclick="addToOrder('Escova/Rasqueadeira', 9.99)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/vasilha.png" alt="Comedouro">
+            <h3>Comedouro duplo</h3>
+            <p>Comedouro Coma melhor</p>
+            <p class="preco">R$ 100,00</p>
+            <a href="#" class="button" onclick="addToOrder('Comedouro duplo', 100.00)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/Cama.png" alt="Cama para pet">
+            <h3>Cama para pet</h3>
+            <p>Cama para seu pet se sentir nas nuvens</p>
+            <p class="preco">R$ 299,90</p>
+            <a href="#" class="button" onclick="addToOrder('Cama para pet', 299.90)">Comprar</a>
+        </div>
+        <div class="produto">
+            <img src="/front/assets/img/pazinha.png" alt="Pazinha">
+            <h3>Pazinha</h3>
+            <p>Pazinha Higiénica</p>
+            <p class="preco">R$ 3,99</p>
+            <a href="#" class="button" onclick="addToOrder('Pazinha', 3.99)">Comprar</a>
+        </div>
+        
+    <script src="/front/assets/js/produto.js"></script>    
+    
+</body>
+</html>
