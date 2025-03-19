@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 ...
+=======
+const con = require('../connect');
+
+const create = (req, res) => {
+    const { nome, email, telefone, senha } = req.body;
+    console.log('Dados recebidos:', req.body); 
+    con.query('INSERT INTO usuarios(nome, email, telefone, senha) VALUES (?, ?, ?, ?)', [nome, email, telefone, senha], (err, result) => {
+        if (err) {
+            console.error('Erro ao inserir dados:', err);
+            res.status(400).json(err);
+        } else {
+            console.log('Dados inseridos com sucesso:', result); 
+            res.status(201).json(result);
+        }
+    });
+};
+
+module.exports = {
+    create
+};
+>>>>>>> d0b845b (atss)
