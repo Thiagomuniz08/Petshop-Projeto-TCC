@@ -139,8 +139,7 @@ li {
 .servico-item img {
     width: 100%;
     border-radius: 5px;
-<<<<<<< HEAD
-=======
+
 }
 
 footer {
@@ -173,5 +172,5 @@ color: #e6007b;
 }
 .social-icons a:nth-child(2):hover {
 color: #3b5998; 
->>>>>>> d0b845b (atss)
+
 }
