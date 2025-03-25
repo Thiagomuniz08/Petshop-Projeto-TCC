@@ -1,4 +1,4 @@
-const uri = 'http://localhost:3000';
+const uri = 'http://localhost:3000'; 
 
 function login() {
     const form = document.querySelector('#loginForm');
@@ -8,6 +8,8 @@ function login() {
             email: form.email.value,
             senha: form.senha.value,
         };
+
+        // Enviar a solicitação para o backend
         fetch(uri + '/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -16,7 +18,7 @@ function login() {
         .then(resp => resp.json())
         .then(resp => {
             if (resp.message === 'Login bem-sucedido') {
-                window.location.href = 'index.html';
+                window.location.href = 'index.html'; 
             } else {
                 alert('Usuário não encontrado ou senha incorreta');
             }
