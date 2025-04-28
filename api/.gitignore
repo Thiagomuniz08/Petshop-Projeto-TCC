@@ -1,6 +1,4 @@
-# Node modules
 node_modules
-
-# Package lock files
-package-lock.json
-npm-debug.log*
+# Keep environment variables out of version control
+.env
+prisma/migrations

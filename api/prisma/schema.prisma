@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root@localhost:3306/petshop"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+model Usuario {
+  id        Int     @id @default(autoincrement())
+  nome      String
+  email     String  @unique
+  telefone  String
+  senha     String
+}
