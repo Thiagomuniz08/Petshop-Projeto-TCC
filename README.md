@@ -77,7 +77,5 @@ Embora a metodologia **Kanban** não exija uma estrutura rígida de funções, c
 
 Com essa distribuição de funções, cada membro poderá focar em suas responsabilidades principais, garantindo um desenvolvimento mais eficiente e colaborativo.
 
-## Cronograma disponivel na pasta docs
-
 ## Repositório parte front-end completa 
 https://github.com/Thiagomuniz08/ProjetoTCC1
