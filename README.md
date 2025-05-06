@@ -79,3 +79,5 @@ Com essa distribuição de funções, cada membro poderá focar em suas responsa
 
 ## Cronograma disponivel na pasta docs
 
+## Repositório parte front-end completa 
+https://github.com/Thiagomuniz08/ProjetoTCC1
