@@ -115,7 +115,7 @@ button:hover {
 }
 
 .banner {
-    background: url('/img/magnus-1.png') no-repeat center center;
+    background: url('/front/assets/img/magnus-1.png') no-repeat center center;
     background-size: cover; 
     display: block;
     height: 410px; 
