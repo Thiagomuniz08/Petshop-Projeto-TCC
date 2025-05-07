@@ -130,7 +130,7 @@ button:hover {
 
 
 .banner {
-    background: url('/front/assets/img/bn1.png') no-repeat center center;
+    background: url('../img/bn1.png') no-repeat center center;
     background-size: cover; 
     display: block;
     height: 410px; 
