@@ -3,7 +3,7 @@ const rota = express.Router();
 
 const usu = require('./controllers/usuario'); 
 
-rota.post('/usu', usu.create);
-rota.post('/login', usu.login);
+rota.post('/usuarios', usu.create); // Rota para cadastro
+rota.post('/login', usu.login); // Rota para login
 
 module.exports = rota;

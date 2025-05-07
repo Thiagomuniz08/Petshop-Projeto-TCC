@@ -18,4 +18,6 @@ DATABASE_URL="mysql://root@localhost:3306/petshop?schema=public&timezone=UTC"
 - Faremos a migração do banco de dados para o MySQL através do comando a seguir no terminal
 ```bash
 npx prisma migrate dev --name init
+
+npx nodemon
 ```
