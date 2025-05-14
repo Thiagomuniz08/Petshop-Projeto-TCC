@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color:  #000000;
     padding: 20px 10%;
     color: white;
 }
@@ -15,10 +15,9 @@ header {
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #000000;
     font-family: Arial, sans-serif;
 }
-
 
 nav ul {
     list-style: none;
@@ -46,7 +45,7 @@ nav ul li a:hover {
 .product {
     height: 450px;
     width: 275px;
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgb(255, 255, 255);
