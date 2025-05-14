@@ -53,7 +53,7 @@ function fecharCarrinho() {
 }
 
 // Carregar os produtos do JSON
-fetch("rabbit.json")
+fetch("assets/json/tartaruga.json")
     .then(response => response.json())
     .then(data => {
         produtos = data;
