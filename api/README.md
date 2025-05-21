@@ -13,6 +13,9 @@ npx prisma init --datasource-provider mysql
 ```js
 DATABASE_URL="mysql://root@localhost:3306/petshop?schema=public&timezone=UTC"
 ```
+```
+npx prisma generate
+```
 
 # Migrations
 - Faremos a migração do banco de dados para o MySQL através do comando a seguir no terminal
