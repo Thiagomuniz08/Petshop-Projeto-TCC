@@ -1,9 +1,15 @@
 const express = require('express');
 const rota = express.Router();
 
-const usu = require('./controllers/usuario'); 
+const usu = require('./controllers/usuario');
+const produto = require('./Controllers/Produto');
 
-rota.post('/usuarios', usu.create); // Rota para cadastro
-rota.post('/login', usu.login); // Rota para login
+// Rotas de usuário
+rota.post('/usuarios', usu.create);
+rota.post('/login', usu.login);
+
+// Rotas de produto
+rota.post('/produtos', produto.create);
+rota.get('/produtos', produto.listar); 
 
 module.exports = rota;
