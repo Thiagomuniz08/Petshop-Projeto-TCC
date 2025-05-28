@@ -20,5 +20,8 @@
   "description": "```bash\r cd api\r npm i prisma -g\r npm init -y\r npm i express cors dotenv\r npx prisma init --datasource-provider mysql\r ```",
   "devDependencies": {
     "prisma": "^6.8.2"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }
