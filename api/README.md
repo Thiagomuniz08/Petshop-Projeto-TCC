@@ -23,4 +23,8 @@ npx prisma generate
 npx prisma migrate dev --name init
 
 npx nodemon
+
+
+* Para adicionar os produtos no banco
+npx prisma db seed
 ```
