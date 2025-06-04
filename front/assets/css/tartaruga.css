@@ -47,7 +47,7 @@ nav ul li a:hover {
 }
 
 button {
-    display: inline-block;
+    display: fixed;
     padding: 12px 24px;
     background-color: #ffeb3b; 
     color: #333; 
@@ -185,6 +185,7 @@ button.fechar:hover {
 
   main{
      margin: 110px;
+     font-size: 12px;
   }
   .cards-container {
     display: grid;

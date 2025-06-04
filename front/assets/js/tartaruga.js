@@ -42,8 +42,8 @@ function mostrarPainelLateral(nomeProduto, imagemProduto) {
 
     // Remove o painel após 10 segundos
     setTimeout(() => {
-        painel.classList.remove('desativo');
-    },);
+        painel.classList.remove('ativo');
+    }, 10000);
 }
 
 // Função para fechar o carrinho
@@ -57,7 +57,7 @@ fetch("assets/json/tartaruga.json")
     .then(response => response.json())
     .then(data => {
         produtos = data;
-        exibirCards(); // chamar dentro do .then(data => {...})
+        exibirCards();
     })
     .catch(error => console.error("Erro ao carregar JSON:", error));
 
@@ -68,8 +68,8 @@ function exibirCards() {
         card.classList.add('card');
         card.innerHTML = `
             <img src="${produto.imagem}" alt="${produto.alt}">
-            <h2>${produto.alt}</h2>
-            <p>${produto.nome}</p>
+            <h2>${produto.nome}</h2>
+            <p>${produto.descricao}</p>
             <p>R$ ${produto.preco.toFixed(2)}</p>
             <button class="add-to-cart-button">Adicionar ao Carrinho</button>
         `;
