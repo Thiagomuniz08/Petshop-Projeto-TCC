@@ -79,3 +79,20 @@ Com essa distribuição de funções, cada membro poderá focar em suas responsa
 
 ## Repositório parte front-end completa 
 https://github.com/Thiagomuniz08/ProjetoTCC1
+
+### Grupo05
+- Metodologia: KANBAN
+- Tema inicial: PetShop 4 patas - Sistema de Gestão de PetShop
+- Alunos: Erick|Back-end|, Thiago|Front-end|, Justo|Testes|
+- [Repositório github](https://github.com/ErickAguiar06/Petshop-Projeto-TCC.git)
+- [x] Modelar o negócio no **[Canvas](https://wellifabio.github.io/canvas/)**
+- [x] Criar um cronograma **[Gráfico Gant](https://wellifabio.github.io/gantt/)**
+- [x] Criar um repositório no **github** e adicionar os integrantes do grupo como colaboradores.
+    - [x] Enviar o link do repositório neste **[FORMS](https://docs.google.com/forms/d/e/1FAIpQLSdQFCwZJLTHT7JLSeKzwsJa9NJqV4QQ1FKrmGqT6vaZVynukw/viewform?usp=dialog)**
+- [x] **Protótipo** funcional inicial (Com Figma - Mobile e Web))
+    - [x] Web
+    - [x] Mobile
+- [ ] Elencar os **[requisitos funcionais como neste exemplo](./requisitos.md)**. 
+    - [ ] Ilustrar cada **requisito funciional** com [DCU (Diagrama de casos de Uso)](https://github.com/wellifabio/senai2024/tree/main/ds/3des/03-rms/aula02)
+- [x] Modelar o banco de dados MER x DER
+- [x] Cadastrar os integrantes do grupo nas ferramentas de gestão de projeto escolhida Trello, Jira, Asana, etc.
