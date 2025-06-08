@@ -2,7 +2,7 @@ const express = require('express');
 const rota = express.Router();
 
 const usu = require('./controllers/usuario');
-const produto = require('./Controllers/Produto');
+const produto = require('./controllers/Produto');
 
 // Rotas de usuário
 rota.post('/usuarios', usu.create);
