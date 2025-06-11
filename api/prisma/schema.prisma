@@ -1,7 +1,8 @@
 datasource db {
   provider = "mysql"
-  url      = "mysql://root@localhost:3306/petshop"
+  url      = "mysql://root@localhost:3306/petshop?schema=public&timezone=UTC"
 }
+
 
 generator client {
   provider = "prisma-client-js"
