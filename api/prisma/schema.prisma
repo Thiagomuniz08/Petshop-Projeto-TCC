@@ -21,7 +21,6 @@ model Produto {
   nome     String
   descricao String
   preco    Float
-  imagem   String
   alt      String
   itens    PedidoProduto[]
 }
