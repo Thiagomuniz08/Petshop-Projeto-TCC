@@ -4,7 +4,7 @@ header {
     align-items: center;
     background-color: 	#000000;
     padding: 20px 10%;
-    color: #fff;
+    color: #fff;     
 }
 
 .logo {
@@ -47,7 +47,7 @@ nav ul li a:hover {
 }
 
 button {
-    display: fixed;
+    display: inline-block;
     padding: 12px 24px;
     background-color: #ffeb3b; 
     color: #333; 
@@ -91,13 +91,19 @@ button.fechar:hover {
 .but {
     display: inline-block;
     padding: 12px 24px;
-    background-color: beige;
-    color: #333;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
-    
+}
+
+.but:hover {
+    background-color: #fdd835;
+    color: #333;
 }
 
 .banner {
@@ -111,6 +117,53 @@ button.fechar:hover {
     text-align: center;
     color: rgb(0, 0, 0);
 }
+.menu-toggle {
+    font-size: 30px;
+    padding: 10px;
+    background-color: #f4a213;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343434;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.slide-menu.active{
+    left: 0;
+}
+.menu-toggle.active{
+    left: 250px;
+}
+
+
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.slide-menu ul li {
+    padding: 15px;
+}
+.slide-menu ul li a {
+    color:white;
+    text-decoration: none;
+    display: black;
+}
+.slide-menu ul li a:hover {
+    background-color:#28a745;
+}
+
 
 .sidebar {
     position: fixed;
@@ -185,7 +238,6 @@ button.fechar:hover {
 
   main{
      margin: 110px;
-     font-size: 12px;
   }
   .cards-container {
     display: grid;
@@ -203,12 +255,17 @@ button.fechar:hover {
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgb(252, 252, 252);
+    box-shadow: 0 4px 12px rgb(255, 255, 255);
     text-align: center;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  
+.card:hover {
+    transform: translateY(-5px);
+}
+
   
   .card img {
     width: 100%;

@@ -1,11 +1,15 @@
 /* Cabeçalho */
 header {
+    position: fixed;
+    z-index: 1000;
     display: flex;
+    height: 60px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color:  #6A0032;
+    background-color: #6a0032;
     padding: 20px 10%;
-    color: white;
+    color: #fff;
 }
 
 .logo {
@@ -19,22 +23,53 @@ body {
     font-family: Arial, sans-serif;
 }
 
-nav ul {
+.menu-toggle {
+    font-size: 30px;
+    padding: 10px;
+    background-color: #fff;
+    color: #6A0032;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343434;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.slide-menu.active{
+    left: 0;
+}
+.menu-toggle.active{
+    left: 250px;
+}
+
+
+.slide-menu ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding: 0;
 }
-
-nav ul li a {
-    color: white;
+.slide-menu ul li {
+    padding: 15px;
+}
+.slide-menu ul li a {
+    color:white;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
+    display: black;
+}
+.slide-menu ul li a:hover {
+    background-color:#28a745;
 }
 
-nav ul li a:hover {
-    color: #ffeb3b;
-}
 
 .products {
     display: flex;
@@ -116,21 +151,49 @@ button {
 button:hover {
     background-color: #fdd835;
 }
+button.fechar {
+    background-color: #121F3E; /* Cor de fundo vermelho */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    border-radius: 50%; /* Botão circular */
+    display: flex; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    transition: background-color 0.3s ease; 
+}
+
+button.fechar:hover {
+    background-color: #000000;
+    color : #fff; 
+    transform: scale(1.1); 
+}
 
 .but {
     display: inline-block;
     padding: 12px 24px;
-    background-color: beige;
-    color: #333;
+    width: 80%;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
 }
 
+.but:hover {
+    background-color: #fdd835;
+    color: #333;
+}
 
 .banner {
-    background: url('../img/bn1.png') no-repeat center center;
+    background: url('../img/bn3.jpg') no-repeat center center;
     background-size: cover; 
     display: block;
     height: 410px; 
@@ -210,6 +273,7 @@ button:hover {
 
   }
   
+  /* Estilo básico do menu */
 .menu {
   list-style: none;
   display: flex;
@@ -258,4 +322,3 @@ button:hover {
 .menu-item:hover .submenu {
   display: block;
 }
-

@@ -22,27 +22,22 @@ function mostrarPainelLateral(nomeProduto, imagemProduto) {
     const textoProduto = document.getElementById('produto-adicionado');
     const imagemElemento = document.createElement('img');
 
-    // Atualiza o texto do produto
     textoProduto.textContent = nomeProduto;
 
-    // Remove qualquer imagem anterior
     const imagemExistente = painel.querySelector('.imagem-produto-adicionado');
     if (imagemExistente) {
         imagemExistente.remove();
     }
 
-    // Adiciona a nova imagem
     imagemElemento.src = imagemProduto;
     imagemElemento.alt = nomeProduto;
     imagemElemento.classList.add('imagem-produto-adicionado');
     textoProduto.insertAdjacentElement('beforebegin', imagemElemento);
 
-    // Mostra o painel
     painel.classList.add('ativo');
 
-    // Remove o painel após 10 segundos
     setTimeout(() => {
-        painel.classList.remove('ativo');
+        painel.classList.remove('desativo');
     }, 10000);
 }
 
@@ -64,14 +59,20 @@ fetch("assets/json/tartaruga.json")
 // Função para exibir os cards dos produtos
 function exibirCards() {
     produtos.forEach(produto => {
+        const precoAntigo = produto.precoAntigo.toFixed(2).replace('.', ',');
+        const preco = produto.preco.toFixed(2).replace('.', ',');
+
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
             <img src="${produto.imagem}" alt="${produto.alt}">
-            <h2>${produto.nome}</h2>
-            <p>${produto.descricao}</p>
-            <p>R$ ${produto.preco.toFixed(2)}</p>
-            <button class="add-to-cart-button">Adicionar ao Carrinho</button>
+            <h2>${produto.alt}</h2>
+            <p>${produto.nome}</p>
+            <p>
+              <span style="text-decoration: line-through; color: gray; ">R$ ${precoAntigo}</span><br>
+              <span style="color: orange; font-weight: bold;">R$ ${preco}</span>
+            </p>
+            <button class="add-to-cart-button">${produto.button}</button>
         `;
 
         const button = card.querySelector('.add-to-cart-button');
@@ -82,3 +83,21 @@ function exibirCards() {
         main.appendChild(card);
     });
 }
+const botoesComprar = document.querySelectorAll('button[onclick^="adicionarAoCarrinho"]');
+botoesComprar.forEach(botao => {
+    const onclickCode = botao.getAttribute('onclick');
+    const params = onclickCode.match(/\((.*?)\)/)[1].split(',').map(param => param.trim());
+    const nomeProduto = params[1].replace(/^'|'$/g, '');
+    const imagemProduto = params[4].replace(/^'|'$/g, '');
+
+    botao.addEventListener('click', () => {
+        mostrarPainelLateral(nomeProduto, imagemProduto);
+    });
+});
+const menuToggle = document.getElementById('menu-toggle');
+const slideMenu = document.getElementById('slide-menu');
+
+menuToggle.addEventListener('click', () => {
+    slideMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+})

@@ -14,8 +14,8 @@
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Promoções</a></li>
-                <li><a href="sobre.html">Contato</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="negocios.html">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -25,8 +25,8 @@
             <h1> 4 PATAS<br> <span>PET SHOP
 
             </span></h1>
-            <p>Alimentos saudáveis e deliciosos para o seu pet!</p>
-            <a href="#" class="btn">Comprar Agora</a>
+            <p>Alimentos saudáveis e deliciosos</p>
+            <p> para o seu pet!</p>
         </div>
         <div class="hero-image">
             <video autoplay loop muted style="width: 300px; height: auto;">
@@ -35,16 +35,46 @@
               </video>
         </div>
     </section>
-
+    <br><br>
+<div class="carousel-container">
+  <button class="carousel-button left" onclick="moveCarousel(-1)">&#8249;</button>
+  <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-card">
+      <a href="negocios.html"><img src="assets/img/yelo.jpg" alt="Higiene 1" class="card-image"></a>
+    </div>
+    <div class="carousel-card">
+      <a href="brinquedos.html"><img src="assets/img/2.jpg" alt="Higiene 2" class="card-image"></a>
+    </div>
+    <div class="carousel-card">
+      <a href="magnus.html"><img src="assets/img/3.jpg" alt="Higiene 3" class="card-image"></a>
+    </div>
+    <div class="carousel-card">
+      <a href="cat2.html"><img src="assets/img/Yellow Blue1.jpg" alt="Higiene 4" class="card-image"></a>
+    </div>
+        <div class="carousel-card">
+         <a href="rabbit.html"><img src="assets/img/1.jpg" alt="Higiene 1" class="card-image"></a>
+    </div>
+    <div class="carousel-card">
+   <img src="assets/img/Yellow Blue Cute Illustration Pet Shop Presentation.jpg" alt="Higiene 2" class="card-image">
+    </div>
+    <div class="carousel-card">
+      <img src="assets/img/Yellow Blue Cute Illustration Pet Shop Presentation.jpg" alt="Higiene 3" class="card-image">
+    </div>
+    <div class="carousel-card">
+      <img src="assets/img/Yellow Blue Cute Illustration Pet Shop Presentation.jpg" alt="Higiene 4" class="card-image">
+    </div>
+  </div>
+  <button class="carousel-button right" onclick="moveCarousel(1)">&#8250;</button>
+</div>
     <section class="categories">
         <h2>Compre por Categorias</h2>
         <div class="category-grid">
             <a href="dog.html"><img src="assets/img/dog1.jpg" alt="Foto do Autor" class="foto-perfil"></a>
             <a href="cat.html"><img src="assets/img/cat2.jpg" alt="Foto do Autor" class="foto-perfil"></a>
-            <a href="tartaruga.html"><img src="assets/img/tortue.jpg" alt="Foto do Autor" class="foto-perfil"></a>
+            <a href="rabbit.html"><img src="assets/img/tortue.jpg" alt="Foto do Autor" class="foto-perfil"></a>
             <a href="fishing.html"><img src="assets/img/fishing.jpg" alt="Foto do Autor" class="foto-perfil"></a>
             <a href="bird.html"><img src="assets/img/bird.jpg" alt="Foto do Autor" class="foto-perfil"></a>
-            <a href="rabbit.html"><img src="assets/img/roedodores.png" alt="Foto do Autor" class="foto-perfil"></a>
+            <a href="tortue.html"><img src="assets/img/roedodores.png" alt="Foto do Autor" class="foto-perfil"></a>
         </div>
     </section>
 
@@ -71,6 +101,21 @@
             </div>
         </div>
     </section>
+<script>
+ let currentIndex = 0;
+  const track = document.getElementById("carouselTrack");
+  const cardWidth = 420; // 400 + margin
+
+  function moveCarousel(direction) {
+    const totalCards = track.children.length;
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > totalCards - 1) currentIndex = totalCards - 1;
+
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+</script>
 
     <footer>
         <p>&copy; 2025 Pet Food - Todos os direitos reservados.</p>

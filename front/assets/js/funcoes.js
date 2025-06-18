@@ -50,10 +50,16 @@ function fecharCarrinho() {
 const botoesComprar = document.querySelectorAll('button[onclick^="adicionarAoCarrinho"]');
 botoesComprar.forEach(botao => {
     const onclickCode = botao.getAttribute('onclick');
-    const params = onclickCode.match(/\((.*?)\)/)[1].split(',').map(param => param.trim());
-    const nomeProduto = params[1].replace(/^'|'$/g, '');
-    const imagemProduto = params[4].replace(/^'|'$/g, '');
-
+    // Extrai todos os parâmetros, strings ou números
+    const params = [];
+    let regex = /'([^']*)'|([0-9.]+)/g;
+    let match;
+    while ((match = regex.exec(onclickCode)) !== null) {
+        params.push(match[1] !== undefined ? match[1] : match[2]);
+    }
+    // Parâmetros: [id, nome, descricao, preco, imagem]
+    const nomeProduto = params[1] || '';
+    const imagemProduto = params[4] || '';
     botao.addEventListener('click', () => {
         mostrarPainelLateral(nomeProduto, imagemProduto);
     });
